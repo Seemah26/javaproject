@@ -1,18 +1,14 @@
-package com.bridgelabz.datasture;
+package com.bridgelabz.util.datastructure;
 
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.util.Date;
-//import com.bridgelabz.task.Stock;
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-//import com.bridgelabz.task.UserDetails;
+
 import java.util.Random;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 
@@ -30,18 +26,36 @@ public class Utility
 	}
 
 	//Regex pattern matcher match the string and replace the regex pattern with user details.
-	
-	
-	//take input word
-	public String inputString(){
-		try{
-			return br.readLine();
-		}
-		catch(IOException ioe){
-			System.out.println(ioe.getMessage());
-		}
-		return "";
-	}
+//	public String convertString(UserDetails userDetails,String message){
+//		Pattern p = Pattern.compile(REGEX_NAME);
+//		Matcher m = p.matcher(message); 
+//		message = m.replaceAll(userDetails.getfName());
+//
+//		p = Pattern.compile(REGEX_FULLNAME);
+//		m = p.matcher(message); 
+//		message = m.replaceAll(userDetails.getfName()+" "+userDetails.getlName());
+//
+//		p = Pattern.compile(REGEX_MOBILE_NO);
+//		m = p.matcher(message); 
+//		message = m.replaceAll(userDetails.mobileNo());
+//
+//		p = Pattern.compile(REGEX_DATE);
+//		m = p.matcher(message); 
+//		message = m.replaceAll(userDetails.date());
+//
+//		return message;
+//	}
+//	
+//	//take input word
+//	public String inputString(){
+//		try{
+//			return br.readLine();
+//		}
+//		catch(IOException ioe){
+//			System.out.println(ioe.getMessage());
+//		}
+//		return "";
+//	}
 
 	//Take Integer Input
 	public int inputInteger(){
@@ -84,7 +98,55 @@ public class Utility
 	}
 
 	//Read the file  and take stock details as input and return array-list of stock details
-	
+//	public ArrayList<Stock> getStockDetails(String fileName){
+//		ArrayList<Stock> stockList=new ArrayList<Stock>();
+//		try{
+//			br=new BufferedReader(new FileReader(fileName));
+//			StringBuilder sb=new StringBuilder();
+//			String line=br.readLine();
+//			SortingFunction sortingFunction=new SortingFunction();
+//			while(line!=null){
+//				String words[]=sortingFunction.wordsArrayFromStatement(line);
+//				try{
+//					stockList.add(new Stock(words[0],Integer.parseInt(words[1]),Integer.parseInt(words[2])));
+//				}
+//				catch(NumberFormatException nfe){
+//				}
+//				catch(ArrayIndexOutOfBoundsException ae){
+//				}
+//				line=br.readLine();
+//			}
+//			return stockList;
+//		 }
+//		catch(Exception e){
+//			return null;
+//		}
+//		finally{
+//			try{
+//				br.close();
+//			}
+//			catch(IOException ioe){
+//			}	
+//		}
+//	}
+
+	//Function take String in dd/mm/yyyy format and return Date Object
+	public Date printDate(String date){
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+		try{
+			return sdf.parse(date);
+		}
+		catch(ParseException pe){
+			return null;
+		}
+	}
+
+	//format date object in this format 01/12/2016 
+	public String getFormatedDate(Date date){
+		SimpleDateFormat sdf=new SimpleDateFormat("dd/mm/yyyy");
+		return sdf.format(date);
+	}
+
 	//Take file name as input and return string of file text
 	public String getFileText(String fileName){
 		try{

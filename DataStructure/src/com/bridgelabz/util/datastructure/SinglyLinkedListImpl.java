@@ -10,12 +10,12 @@ import java.util.Scanner;
 
 public class SinglyLinkedListImpl<T> {
  
-    private Node<T> head;
-    private Node<T> tail;
+    private MyNode<T> head;
+    private MyNode<T> tail;
      
     public ArrayList<String> add(T element) throws IOException{
          
-        Node<T> nd = new Node<T>();
+        MyNode<T> nd = new MyNode<T>();
         nd.setValue(element);
         System.out.println("Adding: "+element);
         String str = (String) element;
@@ -48,8 +48,8 @@ public class SinglyLinkedListImpl<T> {
      
     public void addAfter(T element, T after){
          
-        Node<T> tmp = head;
-        Node<T> refNode = null;
+        MyNode<T> tmp = head;
+        MyNode<T> refNode = null;
         System.out.println("Traversing to all nodes..");
         /**
          * Traverse till given element
@@ -67,7 +67,7 @@ public class SinglyLinkedListImpl<T> {
         }
         if(refNode != null){
             //add element after the target node
-            Node<T> nd = new Node<T>();
+            MyNode<T> nd = new MyNode<T>();
             nd.setValue(element);
             nd.setNextRef(tmp.getNextRef());
             if(tmp == tail){
@@ -85,7 +85,7 @@ public class SinglyLinkedListImpl<T> {
         if(head == null){
             System.out.println("Underflow...");
         }
-        Node<T> tmp = head;
+        MyNode<T> tmp = head;
         head = tmp.getNextRef();
         if(head == null){
             tail = null;
@@ -95,8 +95,8 @@ public class SinglyLinkedListImpl<T> {
      
     public void deleteAfter(T after){
          
-        Node<T> tmp = head;
-        Node<T> refNode = null;
+        MyNode<T> tmp = head;
+        MyNode<T> refNode = null;
         System.out.println("Traversing to all nodes..");
         /**
          * Traverse till given element
@@ -126,7 +126,7 @@ public class SinglyLinkedListImpl<T> {
      
     public void traverse(){
          
-        Node<T> tmp = head;
+        MyNode<T> tmp = head;
         while(true){
             if(tmp == null){
                 break;

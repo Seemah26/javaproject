@@ -1,26 +1,14 @@
 package com.bridgelabz.datasture;
 
-public class Node<E>
-{
-	public String data1;
-	public int data;
-	public Node nextNode;
-	
-	//constructor
-	public Node()
-	{
-		this.nextNode=null;
+class Node2 {
+
+	public Node2(Object data) {
+		super();
+		this.data = data;
+		this.next = null;
 	}
 
-	public void setData(String data1)
-	{
-		this.data1=data1;
-		nextNode=null;
-	}
-	
-	public void setData(int data)
-	{
-		this.data=data;
-		nextNode=null;
-	}
+
+	Object data;
+	Node2 next;
 }

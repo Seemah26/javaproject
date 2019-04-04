@@ -10,11 +10,11 @@ public class serachfileword {
 	 public static void main(String[] args) throws FileNotFoundException {
 	        String word = "";
 	        int val = 0;
-	        while (!word.matches("quit")) {
+	        while (!word.matches("exit")) {
 	            System.out.println("Enter the word to be searched for");
 	            Scanner input = new Scanner(System.in);
 	            word = Algorithm.getString();
-	            Scanner file = new Scanner(new File("C:\\Users\\RDRL\\Desktop\\SearchFile\\File.txt"));
+	            Scanner file = new Scanner(new File("C:\\Users\\RDRL\\Desktop\\seema\\soni.txt"));
 
 	            while (file.hasNextLine()) {
 	                String line = file.nextLine();
@@ -30,7 +30,7 @@ public class serachfileword {
 	            if (val == 0) {
 	                System.out.println("Word does not exist");
 	            }
-	            System.out.println("-------continue or quit--- enter continue or quit");
+	            System.out.println("-------continue or exit--- enter continue or exit");
 	            word = input.next();
 	        }
 	    }

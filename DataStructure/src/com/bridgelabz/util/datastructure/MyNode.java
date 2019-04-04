@@ -1,10 +1,10 @@
 package com.bridgelabz.util.datastructure;
 
 
-	class Node<T> implements Comparable<T> {
+	class MyNode<T> implements Comparable<T> {
 	     
 	    private T value;
-	    private Node<T> nextRef;
+	    private MyNode<T> nextRef;
 	     
 	    public T getValue() {
 	        return value;
@@ -12,10 +12,10 @@ package com.bridgelabz.util.datastructure;
 	    public void setValue(T value) {
 	        this.value = value;
 	    }
-	    public Node<T> getNextRef() {
+	    public MyNode<T> getNextRef() {
 	        return nextRef;
 	    }
-	    public void setNextRef(Node<T> ref) {
+	    public void setNextRef(MyNode<T> ref) {
 	        this.nextRef = ref;
 	    }
 	    @Override
