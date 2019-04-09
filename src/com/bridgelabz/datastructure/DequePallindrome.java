@@ -1,39 +1,32 @@
 package com.bridgelabz.datastructure;
 
-import com.bridgelabz.util.Algorithm;
 import com.bridgelabz.util.datastructure.Dequeue;
+import com.bridgelabz.util.datastructure.SinglyLinkedList;
 
 public class DequePallindrome {
-
-	static boolean ispallindrom(Dequeue<Character> dq) {
-		if (dq.size() % 2 == 0) {
-			while (dq.size() != 0) {
-				char c = dq.removeFront();
-				char c2 = dq.removeRear();
-				if (c != c2) {
-					return false;
-				}
-			}
-		} else {
-			while (dq.size() == 1) {
-				char c = dq.removeFront();
-				char c2 = dq.removeRear();
-				if (c != c2) {
-					return false;
-				}
-			}
-		}
-		return true;
-	}
 	public static void main(String[] args) {
-		System.out.println("enter a string");
-		String s1=Algorithm.getString();
-		Dequeue<Character> dq = new Dequeue<>();
-		int i = 0;
-		while (i < s1.length()) {
-			dq.addRear(s1.charAt(i++));
+
+		Dequeue<Character> dq = new Dequeue<Character>();
+
+		System.out.println("Enter a String: ");
+		String s = SinglyLinkedList.userString();
+		char[] ch = s.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			dq.addfront(ch[i]);
 		}
-		System.out.println(dq + " " + dq.size());
-		System.out.println(ispallindrom(dq));
+		int flag = 0;
+		while (dq.size() > 1) {
+
+			if (dq.removeFront() != dq.removeRear()) {
+
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0) {
+			System.out.println("String is palindrome");
+		} else {
+			System.out.println("String is not palindrome");
+		}
 	}
 }

@@ -1,7 +1,7 @@
 
 package com.bridgelabz.algorithprograms;
 
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 
 public class SearchSort {
 
@@ -19,7 +19,7 @@ public class SearchSort {
 			System.out.println("4. Exit");
 			System.out.println();
 			System.out.println("Enter Your Choice:");
-			int choice = Algorithm.getInt();
+			int choice = AlgorithmUtil.getInt();
 			System.out.println();
 
 			switch (choice) {
@@ -27,14 +27,14 @@ public class SearchSort {
 				start = System.currentTimeMillis();
 				System.out.println("BinarySearch  For String");
 				System.out.println("Enter number of words to be sorted: ");
-				int arraySize1 = Algorithm.getInt();
+				int arraySize1 = AlgorithmUtil.getInt();
 
-				String array[] = Algorithm.input1DStringArray(arraySize1);
+				String array[] = AlgorithmUtil.input1DStringArray(arraySize1);
 				System.out.println("The resultant array is :");
-				Algorithm.bubble(array);
+				AlgorithmUtil.bubble(array);
 				System.out.println("Enter Key: ");
-				String key = Algorithm.getString();
-				int position1 = Algorithm.binarySearch(array, key);
+				String key = AlgorithmUtil.getString();
+				int position1 = AlgorithmUtil.binarySearch(array, key);
 				if (position1 == -1) {
 					System.out.println("Not Found");
 				} else {
@@ -49,10 +49,10 @@ public class SearchSort {
 				start = System.currentTimeMillis();
 				System.out.println("InsertionSort  For String");
 				System.out.println("Enter number of words to be sorted: ");
-				int arraySize2 = Algorithm.getInt();
-				String array2[] = Algorithm.input1DStringArray(arraySize2);
+				int arraySize2 = AlgorithmUtil.getInt();
+				String array2[] = AlgorithmUtil.input1DStringArray(arraySize2);
 				System.out.println("Sorted Array is: ");
-				Algorithm.inserstionSort(array2);
+				AlgorithmUtil.inserstionSort(array2);
 				end = System.currentTimeMillis();
 				elapsed = end - start;
 				System.out.println("Total Elapsed Time is: " + elapsed);
@@ -62,10 +62,10 @@ public class SearchSort {
 				start = System.currentTimeMillis();
 				System.out.println("BubbleSort  For String");
 				System.out.println("Enter number of words to be sorted: ");
-				int arraySize3 = Algorithm.getInt();
-				String array3[] = Algorithm.input1DStringArray(arraySize3);
+				int arraySize3 = AlgorithmUtil.getInt();
+				String array3[] = AlgorithmUtil.input1DStringArray(arraySize3);
 				System.out.println("Sorted Array is: ");
-				Algorithm.bubble(array3);
+				AlgorithmUtil.bubble(array3);
 				end = System.currentTimeMillis();
 				elapsed = end - start;
 				System.out.println("Total Elapsed Time is: " + elapsed);

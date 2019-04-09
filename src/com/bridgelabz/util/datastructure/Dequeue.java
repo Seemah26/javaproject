@@ -1,4 +1,7 @@
 package com.bridgelabz.util.datastructure;
+
+import com.bridgelabz.datastructure.UnorderedList;
+
 public class Dequeue<T> {
 
 		UnorderedList<T> deque = new UnorderedList<>();

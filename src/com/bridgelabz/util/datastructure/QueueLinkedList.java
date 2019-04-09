@@ -3,7 +3,6 @@ public class QueueLinkedList<T> {
 	
 	public Node<T> front, rear;
 	public int size = 0;
-
 	
 	public QueueLinkedList() {
 		front = null;

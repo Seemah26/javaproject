@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 import com.bridgelabz.util.datastructure.SinglyLinkedList;
 
 public class UnorderedList {
@@ -24,7 +24,7 @@ public class UnorderedList {
 		list.traverse();  
 		list.get(); 
 		System.out.println("Enter the key value: ");
-		String key = Algorithm.getString();
+		String key = AlgorithmUtil.getString();
 		
 		SinglyLinkedList<String> newList=list.searchKey(list, key);
 		     

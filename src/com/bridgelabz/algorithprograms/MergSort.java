@@ -1,16 +1,16 @@
 package com.bridgelabz.algorithprograms;
 
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 
 public class MergSort {
 	public static void main(String[] args) {
 
 		System.out.println("Enter the value of N: ");
-		int N = Algorithm.getInt();
+		int N = AlgorithmUtil.getInt();
 		String[] array = new String[N];
 		System.out.println("Enter Strings : ");
 		for (int i = 0; i < N; i++) {
-			array[i] = Algorithm.getString();
+			array[i] = AlgorithmUtil.getString();
 		}
 
 		int n = array.length;

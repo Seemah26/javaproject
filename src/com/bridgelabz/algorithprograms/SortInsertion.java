@@ -1,17 +1,17 @@
 package com.bridgelabz.algorithprograms;
 
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 import com.bridgelabz.util.FunctionalLogic;
 
 public class SortInsertion<T> {
 
 	public static void main(String[] args) {
 		System.out.println("enter the number of elements");
-		int N = Algorithm.getInt();
+		int N = AlgorithmUtil.getInt();
 		String[] array = new String[N];
 		System.out.println("enter next element");
 		for (int i = 0; i < N; i++) {
-			array[i] = Algorithm.getString();
+			array[i] = AlgorithmUtil.getString();
 		}
 		int n = array.length;
 		long start = System.nanoTime();

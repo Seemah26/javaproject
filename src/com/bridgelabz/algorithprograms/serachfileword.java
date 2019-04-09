@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 
 public class serachfileword {
 	 public static void main(String[] args) throws FileNotFoundException {
@@ -13,7 +13,7 @@ public class serachfileword {
 	        while (!word.matches("exit")) {
 	            System.out.println("Enter the word to be searched for");
 	            Scanner input = new Scanner(System.in);
-	            word = Algorithm.getString();
+	            word = AlgorithmUtil.getString();
 	            Scanner file = new Scanner(new File("C:\\Users\\RDRL\\Desktop\\seema\\soni.txt"));
 
 	            while (file.hasNextLine()) {

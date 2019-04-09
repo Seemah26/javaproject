@@ -2,7 +2,9 @@ package com.bridgelabz.util.datastructure;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 
 public class Datastructure {
@@ -54,7 +56,7 @@ public class Datastructure {
 			if (ch[i] == '{' || ch[i] == '(' || ch[i] == '[')
 				st.push(ch[i]);
 
-			else	if (ch[i] == '}' || ch[i] == ')' || ch[i] == ']') {
+			else if (ch[i] == '}' || ch[i] == ')' || ch[i] == ']') {
 
 				if (st.isEmpty()) {
 					return false;
@@ -115,7 +117,8 @@ public class Datastructure {
 				//then adds the number into an ArrayList.
 				if(flag==1)
 					lst.add(i);}
-			return lst;}
+			return lst;
+			}
 		public static int day(int month, int day, int year) {
 	        int y = year - (14 - month) / 12;
 	        int x = y + y/4 - y/100 + y/400;
@@ -129,6 +132,123 @@ public class Datastructure {
 	        if  (year % 400 == 0) return true;
 	        return false;
 	    }
+	    /**
+		 * to find number of total number of BST that can be performed
+		 * @param n double type
+		 * @return double type result 
+		 */
+		public static double binaryCount(int n) {
+			double c = binomialCoeff(2 * n, n);
+			double count = c / (n + 1);
+			return count;
+	}
+		/**
+		 * to find out binomial co-efficient of number
+		 * @param n double type number
+		 * @param k double type number
+		 * @return double type result
+		 */
+		public static double binomialCoeff(double n, double k) {
+			int res = 1;
+		    if (k > n - k) 
+		        k = n - k;  
+			for (int i = 0; i < k; ++i) {
+				res *= (n - i);
+				res /= (i + 1);
+			}
+			return res;		
+	}
+		
+	
+	public static boolean isAnagram(String word, String anagram) {
+			boolean isAnagram = false;
+
+			if (word != null && anagram != null && word.length() == anagram.length()) {
+				char[] arr = word.toCharArray();
+				StringBuilder temp = new StringBuilder(anagram);
+				//int wordLength = FunctionalUtility.readInteger();
+				for (char ch : arr) {
+					int index = temp.indexOf("" + ch);
+					if (index != -1) {
+						temp.deleteCharAt(index);
+					}
+				}
+				isAnagram = temp.toString().isEmpty();
+			}
+			return isAnagram;
+		}
+	
+	public static Set<Integer> primeAnagram(java.util.List<Integer> primenumbers) {
+		Set<Integer> primeAnagram = new HashSet<>();
+		for (int i = 0; i < primenumbers.size(); i++) {
+			for (int j = i+1; j < primenumbers.size(); j++) {
+				if (isAnagram(String.valueOf(primenumbers.get(i)), String.valueOf(primenumbers.get(j)))) {
+					primeAnagram.add(primenumbers.get(i));
+					primeAnagram.add(primenumbers.get(j));
+				}
+			}
+		}
+		return primeAnagram;
+	}
+	public static  StackImplementation<Integer> primeAnagram1(java.util.List<Integer>  primeList) {
+		Set<Integer> primeAnagram = new HashSet<>();
+		for (int i = 0; i < primeList.size(); i++) {
+			for (int j = i+1; j < primeList.size(); j++) {
+				if (isAnagram(String.valueOf(primeList.get(i)), String.valueOf(primeList.get(j)))) {
+					primeAnagram.add(primeList.get(i));
+					primeAnagram.add(primeList.get(j));
+				}
+			}
+		}
+		return (StackImplementation<Integer>) primeAnagram;
+	}
+
+
+	/*	public static Set<Integer> primeAnagrams() {
+			ArrayList<Integer> ar = new ArrayList<Integer>();
+			System.out.println();
+			boolean b;
+			for (int j = 2; j <= 1000; j++) {
+				b = true;
+				for (int i = 2; i < j / 2; i++) {
+					if (j % i == 0) {
+						b = false;
+						break;
+					}
+				}
+				if (b)
+					ar.add(j);
+			}
+			for (int i = 0; i < ar.size(); i++) {
+				for (int j = i + 1; j < ar.size(); j++) {
+					if (anagram(ar.get(i), ar.get(j))) {
+						System.out.println(ar.get(i) + "  " + ar.get(j));
+					}
+				}
+			}
+			return null;			
+		}
+		private static boolean anagram(Integer n1,Integer n2){
+			int[] n1count = count(n1);
+			int[] n2count = count(n2);
+			for (int i = 0; i < n2count.length; i++) {
+				if (n1count[i] != n2count[i]) {
+					return false;
+				}
+			}
+			return true;
+		}
+		public static int[] count(int n) {
+			int[] count = new int[10];
+			int temp = n;
+			while (temp != 0) {
+				int r = temp % 10;
+				count[r]++;
+				temp = temp / 10;
+			}
+			return count;
+		}*/
+		
 }
 
 

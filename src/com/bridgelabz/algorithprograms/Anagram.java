@@ -1,23 +1,25 @@
 package com.bridgelabz.algorithprograms;
 
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 import com.bridgelabz.util.FunctionalLogic;
 
 public class Anagram {
 
 	public static void main(String[] args) {
-		System.out.println("enter a first string ");
-		String firstString = FunctionalLogic.getString();
-		char[] s1 = firstString.toCharArray();
+System.out.println("Enter a string");
 		
-		System.out.println("enter a second string ");
-		String secondString = FunctionalLogic.getString();
-		char[] s2 = secondString.toCharArray();
+		//Reading input two input strings from user
+		String str1=AlgorithmUtil.getString();
+		System.out.println("Enter another string to detect anagram");
+		String str2=AlgorithmUtil.getString();
 		
-		if (Algorithm.isAnagram(s1, s2))
-			System.out.println("The two strings are anagram of each other");
+		//Method 1- using static function of AlgorithmUtility class of
+		//com.bridgelabz.util package
+		boolean res=AlgorithmUtil.isAnagram(str1,str2);
+		if(res) {
+			System.out.println("The strings are anagram");
+		}
 		else
-			System.out.println("The two strings are not anagram of each other");
-
+			System.out.println("The strings are not anagram");
 	}
 }

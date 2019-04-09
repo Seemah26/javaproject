@@ -2,7 +2,7 @@ package com.bridgelabz.algorithprograms;
 
 import java.util.Arrays;
 
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 import com.bridgelabz.util.FunctionalLogic;
 
 public class TestAnagram<T> {

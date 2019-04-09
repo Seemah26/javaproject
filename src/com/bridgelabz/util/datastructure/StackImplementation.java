@@ -1,7 +1,7 @@
 package com.bridgelabz.util.datastructure;
 public class StackImplementation <T> {
 		
-		int capacity = 10;
+		int capacity = 100;
 
 		
 		private Object[] stack = new Object[capacity];

@@ -1,6 +1,6 @@
 package com.bridgelabz.algorithprograms;
 
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 
 public class BubbleSort {
 
@@ -8,11 +8,11 @@ public class BubbleSort {
 		BubbleSort ref = new BubbleSort();
 
 		System.out.println("enter the number of elements");
-		int n = Algorithm.getInt();
+		int n = AlgorithmUtil.getInt();
 		int[] arr = new int[n];
 		System.out.println("enter next element");
 		for (int i = 0; i < n; i++) {
-			arr[i] = Algorithm.getInt();
+			arr[i] = AlgorithmUtil.getInt();
 		}
 		ref.bubbleSort(arr);
 		System.out.println("Sorted array");

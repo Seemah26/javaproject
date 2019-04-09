@@ -1,7 +1,7 @@
 package com.bridgelabz.datastructure;
 import com.bridgelabz.util.datastructure.Datastructure;
 
-public class BalancedParan {
+public class BalancedParanthesis {
 	public static void main(String[] args) {
 		System.out.println("Enter expression: ");
 		String input = Datastructure.getString();

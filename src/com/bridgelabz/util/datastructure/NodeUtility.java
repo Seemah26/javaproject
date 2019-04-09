@@ -17,7 +17,7 @@ public class NodeUtility {
 			try
 			{
 				@SuppressWarnings("resource")
-				FileInputStream fis = new FileInputStream("‪C:\\Users\\RDRL\\Desktop\\seema\\numbers.txt");
+				FileInputStream fis = new FileInputStream("‪C:\\Users\\RDRL\\Desktop\\seema\\number1.txt");
 				char ch;
 				String word3="";
 
@@ -53,7 +53,7 @@ public class NodeUtility {
 			try
 			{
 				String intFile = new String();
-				FileReader fr = new FileReader("‪C:\\Users\\RDRL\\Desktop\\seema\\number.txt");
+				FileReader fr = new FileReader("‪C:\\Users\\RDRL\\Desktop\\seema\\number1.txt");
 				
 				BufferedReader br = new BufferedReader(fr);
 			    String s;
@@ -175,7 +175,7 @@ public class NodeUtility {
 	    	try
 			{
 				String tString="";
-			    File file=new File("‪C:\\Users\\RDRL\\Desktop\\seema\\number.txt");
+			    File file=new File("‪‪C:\\Users\\RDRL\\Desktop\\seema\\number1.txt");
 			    file.createNewFile();
 			    FileWriter fw=new FileWriter(file);
 

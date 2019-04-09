@@ -1,13 +1,13 @@
 package com.bridgelabz.algorithprograms;
 
-import com.bridgelabz.util.Algorithm;
+import com.bridgelabz.util.AlgorithmUtil;
 
 public class VendingMachine {
 
 	public static void main(String[] args) {
 
 		System.out.println("enter amoumt");
-		int value = Algorithm.getInt();
+		int value = AlgorithmUtil.getInt();
 		notes(value);
 	}
 

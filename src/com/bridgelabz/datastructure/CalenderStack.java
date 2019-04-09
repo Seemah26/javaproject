@@ -25,15 +25,12 @@ public class CalenderStack {
 			QueueLinkedList<Integer> refqueue=new QueueLinkedList<>();
 			for (int i = 1; i <= days[month]; i++) {
 				refqueue.insert(i);
-				if (((i + dayofWeek) % 7 == 0 || i==days[month]) ) {
-					stack.push(refqueue);
-					refqueue=new QueueLinkedList<Integer>();
-					continue;
-				}
+				if (((i + dayofWeek) % 7 == 0 || i==days[month]) ) {}
 			}	
 			for (int i = 0; i < dayofWeek; i++)
 			System.out.print("\t");
 			int size = stack.size();
+			
 			StackImplementation<QueueLinkedList<Integer>> stackNew = new StackImplementation<>();
 			
 			for(int i=0; i < size; i++){
