@@ -50,7 +50,7 @@ public class Datastructure {
 
 	public static boolean areParenthesisBalanced(char[] ch) {
 
-		StackImplementation st = new StackImplementation();
+		StackImplementation<Character> st = new StackImplementation<Character>();
 
 		for (int i = 0; i < ch.length; i++) {
 			if (ch[i] == '{' || ch[i] == '(' || ch[i] == '[')
@@ -66,9 +66,7 @@ public class Datastructure {
 					return false;
 				}
 			}
-
 		}
-
 		if (st.isEmpty())
 			return true;
 		else {

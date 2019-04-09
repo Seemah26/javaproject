@@ -1,8 +1,6 @@
 
 package com.bridgelabz.util.datastructure;
 
-import java.util.Deque;
-
 public class Node<T> {
 	public T value;
 	public Node<T> nextRef;
@@ -12,7 +10,7 @@ public class Node<T> {
 
 	Deque<T> front;
 	Deque<T> rear;
-	public int size = 0;
+	public static int size = 0;
 
 	public Node() {
 		value = null;
@@ -101,7 +99,7 @@ public class Node<T> {
 	}
 
 	// return size of dequeue
-	public int size() {
+	public static int size() {
 		return size;
 	}
 
@@ -140,5 +138,9 @@ public class Node<T> {
 			this.pre = null;
 		}
 	}
+	public int size1() {
+		return Node.size();
+	}
+	
 
 }
